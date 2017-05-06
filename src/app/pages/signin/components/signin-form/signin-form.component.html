@@ -1,0 +1,20 @@
+<form class="form display-flex flex-column flex-middle flex-center" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+  <label [ngClass]="{'is-invalid-label': errors['phone']}">
+    <ng-container i18n>Cell phone number</ng-container>
+    <input type="tel" [ngClass]="{'is-invalid-input': errors['phone']}" formControlName="phone" autofocus>
+    <span class="form-error" [ngClass]="{'is-visible': errors['phone']}">{{errors['phone']}}</span>
+  </label>
+
+  <label [ngClass]="{'is-invalid-label': errors['password']}">
+    <ng-container i18n>Password</ng-container>
+    <span class="password-wrapper">
+      <input type="password" [ngClass]="{'is-invalid-input': errors['password']}" formControlName="password" #password>
+      <img class="icon-eye" src="/assets/foundation-icons/svgs/fi-eye.svg" alt="" (click)="togglePassword(password)">
+    </span>
+    <span class="form-error" [ngClass]="{'is-visible': errors['password']}">{{errors['password']}}</span>
+  </label>
+
+  <span class="form-error" [ngClass]="{'is-visible': form.valid && errors['form']}">{{errors['form']}}</span>
+
+  <button type="submit" class="bt green" [ngClass]="{'disabled': form.invalid}" i18n>зарегистрироваться</button>
+</form>
