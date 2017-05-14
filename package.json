@@ -5,8 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:dev": "ng build -dev -aot",
-    "build:prod": "ng build -prod -aot",
+    "build:development": "ng build -dev -aot",
+    "build:master": "ng build -prod -aot",
     "test": "ng test",
     "lint": "ng lint",
     "lint-scss": "sass-lint -c .sass-lint.yml -v -q",

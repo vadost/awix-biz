@@ -20,6 +20,6 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 script:
   - npm run-script lint
-  - npm run-script build
+  - npm run-script build:$TRAVIS_BRANCH
 after_success:
   - "curl -u deploy:$DEPLOY_PASSWORD https://deploy.awix.io/deploy/frontend/$TRAVIS_BRANCH"
