@@ -9,12 +9,27 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: 'app/pages/home/home.module#HomeModule',
-    pathMatch: 'full',
+    pathMatch: 'full'
+  },
+  {
+    path: 'signup',
+    loadChildren: 'app/pages/signup/signup.module#SignupModule',
+    canLoad: [NoAuthGuard]
   },
   {
     path: 'signin',
     loadChildren: 'app/pages/signin/signin.module#SigninModule',
-    canLoad: [NoAuthGuard],
+    canLoad: [NoAuthGuard]
+  },
+  {
+    path: 'recover',
+    loadChildren: 'app/pages/recover/recover.module#RecoverModule',
+    canLoad: [NoAuthGuard]
+  },
+  {
+    path: 'recover-success',
+    loadChildren: 'app/pages/recover-success/recover-success.module#RecoverSuccessModule',
+    canLoad: [NoAuthGuard]
   },
   {
     path: 'logout',
@@ -23,11 +38,11 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: 'app/pages/dashboard/dashboard.module#DashboardModule',
-    canLoad: [AuthGuard],
+    canLoad: [AuthGuard]
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: ''
   },
 ];
 

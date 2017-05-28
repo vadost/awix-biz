@@ -1,20 +1,31 @@
-<form class="form display-flex flex-column flex-middle flex-center" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
-  <label [ngClass]="{'is-invalid-label': errors['phone']}">
-    <ng-container i18n>Cell phone number</ng-container>
-    <input type="tel" [ngClass]="{'is-invalid-input': errors['phone']}" formControlName="phone" autofocus>
-    <span class="form-error" [ngClass]="{'is-visible': errors['phone']}">{{errors['phone']}}</span>
-  </label>
+<form class="form display-flex flex-column flex-stretch flex-center" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-header">
+    <div class="form-title">Вход</div>
+  </div>
+  <div class="form-content">
+    <label [ngClass]="{'is-invalid-label': errors['phone']}">
+      <input type="tel" placeholder="Номер телефона" [ngClass]="{'is-invalid-input': errors['phone']}" formControlName="phone" autofocus>
+      <div class="error" [ngClass]="{'is-visible': errors['phone']}">{{errors['phone']}}</div>
+    </label>
+    <label [ngClass]="{'is-invalid-label': errors['password']}">
+      <div class="password-wrapper">
+        <input type="password" placeholder="Пароль" [ngClass]="{'is-invalid-input': errors['password']}" formControlName="password"
+               #password>
+        <button class="show-password">
+          <img class="icon-eye" src="/assets/images/icons/eye.svg" alt="" (click)="togglePassword(password)">
+        </button>
+      </div>
+      <div class="error" [ngClass]="{'is-visible': errors['password']}">{{errors['password']}}</div>
+      <a [routerLink]="['/recover']" class="link">Забыли пароль?</a>
+    </label>
+    <div class="form-error" [ngClass]="{'is-visible': form.valid && errors['form']}">{{errors['form']}}</div>
+    <div class="display-flex flex-middle flex-center">
+      <button type="submit" class="bt green" [ngClass]="{'disabled': form.invalid}" i18n>вход</button>
+    </div>
+  </div>
 
-  <label [ngClass]="{'is-invalid-label': errors['password']}">
-    <ng-container i18n>Password</ng-container>
-    <span class="password-wrapper">
-      <input type="password" [ngClass]="{'is-invalid-input': errors['password']}" formControlName="password" #password>
-      <img class="icon-eye" src="/assets/foundation-icons/svgs/fi-eye.svg" alt="" (click)="togglePassword(password)">
-    </span>
-    <span class="form-error" [ngClass]="{'is-visible': errors['password']}">{{errors['password']}}</span>
-  </label>
-
-  <span class="form-error" [ngClass]="{'is-visible': form.valid && errors['form']}">{{errors['form']}}</span>
-
-  <button type="submit" class="bt green" [ngClass]="{'disabled': form.invalid}" i18n>зарегистрироваться</button>
+  <div class="form-footer display-flex flex-center flex-middle flex-column">
+    <p class="disclaimer">Еще нет аккаунта?</p>
+    <a class="link" [routerLink]="['/signup']">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
+  </div>
 </form>
