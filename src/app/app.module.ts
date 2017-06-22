@@ -21,7 +21,7 @@ import 'rxjs/add/operator/debounceTime';
     BrowserModule,
     SharedModule,
     CoreModule.forRoot(),
-    AppRoutingModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,

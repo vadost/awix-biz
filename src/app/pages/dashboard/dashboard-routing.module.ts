@@ -7,7 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
-  },
+    // redirectTo: 'calendar',
+    children: [
+      {
+        path: 'calendar',
+        loadChildren: 'app/pages/dashboard/calendar/calendar.module#CalendarModule'
+      }
+    ]
+  }
 ];
 
 @NgModule({
