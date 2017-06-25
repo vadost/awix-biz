@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class AuthService {
   isLoggedIn(): Observable<boolean> {
-    return Observable.of(true);
+    return Observable.of(false);
   }
 
   signIn(phone: string, password: string): Observable<boolean> {
