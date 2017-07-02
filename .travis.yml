@@ -1,11 +1,12 @@
 sudo: required
-dist: trusty
+services:
+  - docker
 language: node_js
 node_js:
-  - "7.8"
+  - "node"
 branches:
   only:
-    - master
+    - production
     - development
 addons:
   apt:
@@ -20,6 +21,9 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 script:
   - npm run-script lint
+  - npm run-script test
   - npm run-script build:$TRAVIS_BRANCH
 after_success:
-  - "curl -u deploy:$DEPLOY_PASSWORD https://deploy.awix.io/deploy/frontend/$TRAVIS_BRANCH"
+  - docker build --build-arg APP_ENV=$TRAVIS_BRANCH -t $DOCKER_USERNAME/awix-frontend-$TRAVIS_BRANCH .
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push $DOCKER_USERNAME/awix-frontend-$TRAVIS_BRANCH
