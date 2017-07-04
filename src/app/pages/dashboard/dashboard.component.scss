@@ -18,11 +18,12 @@
 }
 
 .main-panel {
+  padding: 20px;
   height: 100%;
   position: relative;
   float: right;
   overflow: auto;
-  width: calc(100% - 260px);
+  width: calc(100% - 300px);
   -webkit-transform: translate3d(0px, 0, 0);
   -moz-transform: translate3d(0px, 0, 0);
   -o-transform: translate3d(0px, 0, 0);

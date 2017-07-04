@@ -14,7 +14,7 @@ const routes: Routes = [
       },
       {
         path: 'calendar',
-        loadChildren: 'app/pages/dashboard/calendar/calendar.module#CalendarModule'
+        loadChildren: 'app/pages/dashboard/schedule/schedule.module#ScheduleModule'
       },
       {
         path: 'branches',
