@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class ClubnikaFrontendPage {
+export class AwixPage {
   navigateTo() {
     return browser.get('/');
   }

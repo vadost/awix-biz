@@ -1,10 +1,10 @@
-import { ClubnikaFrontendPage } from './app.po';
+import { AwixPage } from './app.po';
 
-describe('clubnika-frontend App', () => {
-  let page: ClubnikaFrontendPage;
+describe('awix-biz App', () => {
+  let page: AwixPage;
 
   beforeEach(() => {
-    page = new ClubnikaFrontendPage();
+    page = new AwixPage();
   });
 
   it('should display welcome message', () => {
