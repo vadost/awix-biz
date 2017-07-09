@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { CalendarComponent } from 'ap-angular2-fullcalendar';
+// import { CalendarComponent } from 'ap-angular2-fullcalendar';
 
 @Component({
   selector: 'app-schedule',
@@ -7,7 +7,7 @@ import { CalendarComponent } from 'ap-angular2-fullcalendar';
   styleUrls: ['./schedule.component.scss']
 })
 export class ScheduleComponent {
-  @ViewChild(CalendarComponent) myCalendar: CalendarComponent;
+  // @ViewChild(CalendarComponent) myCalendar: CalendarComponent;
 
   calendarOptions: Object = {
     height: 'parent',
@@ -76,20 +76,20 @@ export class ScheduleComponent {
   constructor() { }
 
   changeCalendarView(view: any) {
-    this.myCalendar.fullCalendar({
-      dayClick: function(date: any, jsEvent: any, view: any) {
+    /*this.myCalendar.fullCalendar({
+      dayClick: function(date: any, jsEvent: any, v: any) {
 
         alert('Clicked on: ' + date.format());
 
         alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
 
-        alert('Current view: ' + view.name);
+        alert('Current view: ' + v.name);
 
         // change the day's background color just for fun
         // $(this).css('background-color', 'red');
 
       }
-    });
+    });*/
   }
 
   onCalendarInit(event: any) {
