@@ -1,0 +1,15 @@
+.idea
+dist
+e2e
+node_modules
+.editorconfig
+.git
+.gitignore
+.sass-lint.yml
+.travis.yml
+karma.conf.js
+protractor.conf.js
+README.md
+tslint.json
+wallaby.js
+npm-debug.log

@@ -15,12 +15,6 @@
     "lib": [
       "es2016",
       "dom"
-    ],
-    "alwaysStrict": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true
+    ]
   }
 }
