@@ -8,7 +8,7 @@ import { LogoutComponent } from './modules/core/components/logout/logout.compone
 const routes: Routes = [
   {
     path: '',
-    loadChildren: 'app/pages/home/home.module#HomeModule',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
   {

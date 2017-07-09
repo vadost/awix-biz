@@ -1,0 +1,19 @@
+<div class="sidebar">
+
+  <div class="display-flex flex-center flex-middle">
+    <a class="logo">
+      <img src="assets/images/logo.svg" alt="awix">
+    </a>
+  </div>
+
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+      <li routerLinkActive="active" *ngFor="let item of menuItems">
+        <a routerLink="{{item.path}}"
+           title="{{item.title}}">
+          <p>{{item.title}}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
