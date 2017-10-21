@@ -1,0 +1,109 @@
+<div class="wrapper wrapper-full-page">
+    <nav class="navbar navbar-primary navbar-transparent navbar-absolute">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo-title" href="https://awix.io">AWIX</a>
+            </div>
+            <div class="collapse navbar-collapse" id="menu-example">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a routerLink="/pages/register">
+                            <i class="material-icons text-uppercase">person_add</i>Регистрация
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/pages/login">
+                            <i class="material-icons text-uppercase">fingerprint</i>Вход
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/pages/forgot-password">
+                            <i class="material-icons text-uppercase">lock_open</i>Восстановление пароля
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="full-page register-page" filter-color="black" data-image="../assets/img/login2.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="card card-signup card-hidden">
+                        <h2 class="card-title text-center">Регистрация</h2>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="form" method="" action="">
+                                    <div class="card-content">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">face</i>
+                                            </span>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control" placeholder="Имя">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control" placeholder="Фамилия">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">email</i>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Эл. адрес">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">lock_outline</i>
+                                            </span>
+                                            <input type="password" placeholder="Пароль" class="form-control" />
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">local_offer</i>
+                                            </span>
+                                            <input type="text" placeholder="Название компании" class="form-control" />
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">phone_iphone</i>
+                                            </span>
+                                            <input type="text" placeholder="Телефон" class="form-control" />
+                                        </div>
+                                        <!-- If you want to add a checkbox to this form, uncomment this code -->
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="optionsCheckboxes" checked>Я принимаю условия
+                                                <a>договора-оферты</a>.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="footer text-center">
+                                        <a href="#pablo" class="btn btn-primary btn-round text-uppercase">Зарегистрироваться</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <p class="copyright text-center" style="margin-top: 60px">
+                    &copy;
+                    2017
+                    <a href="https://awix.io">AWIX Team</a>, made with love for a happy clients
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

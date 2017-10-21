@@ -20,8 +20,6 @@ before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 script:
-  - npm run-script lint
-  - npm run-script test
   - npm run-script build:$TRAVIS_BRANCH
 after_success:
   - docker build --build-arg APP_ENV=$TRAVIS_BRANCH -t $DOCKER_USERNAME/awix-biz-$TRAVIS_BRANCH .
