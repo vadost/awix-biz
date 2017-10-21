@@ -7,20 +7,20 @@ import { LoginComponent } from './login/login.component';
 
 export const PagesRoutes: Routes = [
 
-    {
-        path: '',
-        children: [ {
-            path: 'login',
-            component: LoginComponent
-        },{
-            path: 'forgot-password',
-            component: ForgotPasswordComponent
-        },{
-            path: 'register',
-            component: RegisterComponent
-        },{
-            path: 'pricing',
-            component: PricingComponent
-        }]
-    }
+  {
+    path: '',
+    children: [{
+      path: 'login',
+      component: LoginComponent
+    }, {
+      path: 'forgot-password',
+      component: ForgotPasswordComponent
+    }, {
+      path: 'register',
+      component: RegisterComponent
+    }, {
+      path: 'pricing',
+      component: PricingComponent
+    }]
+  }
 ];

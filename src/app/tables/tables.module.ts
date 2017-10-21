@@ -18,11 +18,11 @@ import { DataTableComponent } from './datatable.net/datatable.component';
     FormsModule
   ],
   declarations: [
-      ExtendedTableComponent,
-      DataTableComponent,
-      RegularTableComponent,
-      
+    ExtendedTableComponent,
+    DataTableComponent,
+    RegularTableComponent,
   ]
 })
 
-export class TablesModule {}
+export class TablesModule {
+}

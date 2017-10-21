@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
-    selector: 'timeline-cmp',
-    templateUrl: 'timeline.component.html'
+  moduleId: module.id,
+  selector: 'timeline-cmp',
+  templateUrl: 'timeline.component.html'
 })
 
-export class TimelineComponent{}
+export class TimelineComponent {
+}

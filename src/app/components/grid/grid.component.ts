@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
-    selector: 'grid-cmp',
-    templateUrl: 'grid.component.html'
+  moduleId: module.id,
+  selector: 'grid-cmp',
+  templateUrl: 'grid.component.html'
 })
 
-export class GridSystemComponent{}
+export class GridSystemComponent {
+}

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-declare var $:any;
+declare const $: any;
 
 @Component({
-    moduleId: module.id,
-    selector: 'regularforms-cmp',
-    templateUrl: 'regularforms.component.html'
+  moduleId: module.id,
+  selector: 'regularforms-cmp',
+  templateUrl: 'regularforms.component.html'
 })
 
-export class RegularFormsComponent implements OnInit{
+export class RegularFormsComponent implements OnInit {
 
-    ngOnInit(){
-    }
+  ngOnInit() {
+  }
 }

@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-declare var $:any;
+declare var $: any;
 
 @Component({
   selector: 'app-buttons',
   templateUrl: './buttons.component.html'
 })
-export class ButtonsComponent implements OnInit {
-
+export class ButtonsComponent {
   // constructor(private navbarTitleService: NavbarTitleService, private notificationService: NotificationService) { }
 
-  public ngOnInit() {
-  }
 }
