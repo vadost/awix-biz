@@ -3,7 +3,6 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { ChartsComponent } from './charts.component';
 import { ChartsRoutes } from './charts.routing';
 
 @NgModule({
@@ -12,7 +11,7 @@ import { ChartsRoutes } from './charts.routing';
         RouterModule.forChild(ChartsRoutes),
         FormsModule
     ],
-    declarations: [ChartsComponent]
+    declarations: []
 })
 
 export class ChartsModule {}
