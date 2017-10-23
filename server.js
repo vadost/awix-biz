@@ -1,11 +1,14 @@
 const express = require('express');
 const app = express();
+const path = require('path');
+const files_dir = path.join(process.cwd(), 'dist');
 
 app.use(express.static('dist'));
 
 app.all('*', (req, res, next) => {
-  res.sendStatus(404);
+  res.sendFile(files_dir + '/index.html');
 });
+
 
 app.use((err, req, res, next) => {
   if (res.headersSent) {
