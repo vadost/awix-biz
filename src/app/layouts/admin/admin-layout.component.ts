@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavItem, NavItemType } from '../../md/md.module';
 import { Location } from '@angular/common';
 
-declare var $: any;
+declare const $: any;
 const mda: any = {
   misc: {
     movingTab: '<div class="sidebar-moving-tab"/>',
