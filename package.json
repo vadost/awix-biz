@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "clearPort4200": "fuser -k 4200/tcp",
     "start:server": "node server.js",
     "build:development": "ng build -dev -aot",
     "build:production": "ng build -prod -aot",
